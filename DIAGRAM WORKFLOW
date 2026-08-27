@@ -1,0 +1,30 @@
+                ┌──────────────────────────────┐
+                │      SNA-WS01 Server         │
+                │ ──────────────────────────── │
+                │  Active Directory (AD DS)    │
+                │  DNS Server                  │
+                │  DHCP Server                 │
+                │  Group Policy                │
+                └─────────────┬────────────────┘
+                              ▲
+                      ◉ ◉ ◉ ◉ ◉   (Authentication)
+                              │
+                      ◉ ◉ ◉ ◉ ◉   (DNS Query)
+                              │
+                      ◉ ◉ ◉ ◉ ◉   (DHCP Lease)
+                              │
+               ===============================
+                  SNA-Internal Network Switch
+               ===============================
+                              │
+                      ◉ ◉ ◉ ◉ ◉
+                              ▼
+                ┌──────────────────────────────┐
+                │       SNA-WIN01 Client       │
+                │                              │
+                │ Request IP                   │
+                │ DNS Lookup                   │
+                │ Join Domain                  │
+                │ Login staff1                 │
+                │ Receive GPO                  │
+                └──────────────────────────────┘
