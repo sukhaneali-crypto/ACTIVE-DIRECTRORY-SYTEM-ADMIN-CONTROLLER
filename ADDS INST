@@ -1,0 +1,97 @@
+Lab 04 - Active Directory Domain Services (AD DS)
+│
+├── Active Directory Installation
+│   ├── Install AD DS Role
+│   │      ➜ Installed the Active Directory Domain Services role.
+│   │
+│   ├── Install DNS Server
+│   │      ➜ Installed the DNS Server role required for Active Directory.
+│   │
+│   └── Verify Installation
+│          ➜ Confirmed successful AD DS installation in Server Manager.
+│
+├── Domain Controller Configuration
+│   ├── Create New Forest
+│   │      ➜ Created a new Active Directory forest (itlab.local).
+│   │
+│   ├── Configure Domain Controller
+│   │      ➜ Promoted SNA-WS01 to a Domain Controller.
+│   │
+│   ├── Configure Global Catalog
+│   │      ➜ Enabled Global Catalog during promotion.
+│   │
+│   ├── Configure DSRM Password
+│   │      ➜ Configured Directory Services Restore Mode password.
+│   │
+│   └── Verify Domain Controller
+│          ➜ Confirmed successful domain controller deployment.
+│
+├── Organizational Unit (OU) Management
+│   ├── Create OU_Admin
+│   │      ➜ Created an Organizational Unit for administrators.
+│   │
+│   ├── Create OU_Staff
+│   │      ➜ Created an Organizational Unit for staff users.
+│   │
+│   └── Create OU_Computers
+│          ➜ Created an Organizational Unit for domain computers.
+│
+├── Security Group Management
+│   ├── Create GRP_Admins
+│   │      ➜ Created a Global Security Group for administrators.
+│   │
+│   ├── Create GRP_Staff
+│   │      ➜ Created a Global Security Group for staff members.
+│   │
+│   ├── Add admin1
+│   │      ➜ Added admin1 to GRP_Admins.
+│   │
+│   └── Add staff1 & staff2
+│          ➜ Added staff users to GRP_Staff.
+│
+├── User Account Management
+│   ├── Create admin1
+│   │      ➜ Created the administrator domain account.
+│   │
+│   ├── Create staff1
+│   │      ➜ Created the first staff domain account.
+│   │
+│   └── Create staff2
+│          ➜ Created the second staff domain account.
+│
+├── Domain Join
+│   ├── Configure Client DNS
+│   │      ➜ Set the preferred DNS server to 10.10.50.10.
+│   │
+│   ├── Join Domain
+│   │      ➜ Joined SNA-WIN01 to the itlab.local domain.
+│   │
+│   ├── Verify Domain Membership
+│   │      ➜ Confirmed successful domain authentication.
+│   │
+│   └── Restart Client
+│          ➜ Restarted the client to complete domain joining.
+│
+├── Computer Object Management
+│   ├── Locate SNA-WIN01
+│   │      ➜ Located the computer object in Active Directory.
+│   │
+│   ├── Move to OU_Computers
+│   │      ➜ Organized the computer object into the correct OU.
+│   │
+│   └── Verify OU Placement
+│          ➜ Confirmed successful computer object relocation.
+│
+├── PowerShell Commands
+│   ├── Get-ADUser -Filter *
+│   ├── Get-ADGroupMember "GRP_Admins"
+│   └── Get-ADGroupMember "GRP_Staff"
+│
+└──                                        Lab Outcome
+    ├── Active Directory Domain Services successfully deployed.
+    ├── Domain Controller configured for itlab.local.
+    ├── Organizational Units created for centralized management.
+    ├── Security groups and domain users successfully configured.
+    ├── Windows client successfully joined to the domain.
+    ├── Computer objects organized using Organizational Units.
+    └── Enterprise Active Directory environment successfully established.
