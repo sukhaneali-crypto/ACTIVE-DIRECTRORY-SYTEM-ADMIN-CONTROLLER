@@ -1,0 +1,61 @@
+task 1 - Internal Lab Network
+│
+├── Hyper-V Configuration
+│   ├── Create Internal Virtual Switch
+│   │      ➜ Created an isolated virtual network named SNA-Internal.
+│   │
+│   ├── Connect SNA-WS01
+│   │      ➜ Connected the Windows Server VM to the internal switch.
+│   │
+│   └── Connect SNA-WIN01
+│          ➜ Connected the Windows Client VM to the same internal switch.
+│
+├── Computer Configuration
+│   ├── Rename SNA-WS01
+│   │      ➜ Renamed the server according to the SNA naming convention.
+│   │
+│   └── Rename SNA-WIN01
+│          ➜ Renamed the client according to the SNA naming convention.
+│
+├── Network Configuration
+│   ├── Configure Static IP
+│   │      ➜ Assigned static IPv4 addresses to both virtual machines.
+│   │
+│   ├── Configure Subnet Mask
+│   │      ➜ Applied the 255.255.255.0 subnet mask.
+│   │
+│   ├── Leave Gateway Blank
+│   │      ➜ No default gateway was configured for the isolated lab.
+│   │
+│   └── Leave DNS Blank
+│          ➜ DNS configuration was skipped for this lab.
+│
+├── Hyper-V Checkpoints
+│   └── Lab02-Baseline
+│          ➜ Created restore points before proceeding to future labs.
+│
+├── Connectivity Verification
+│   ├── Verify Hostname
+│   │      ➜ Confirmed computer names using the hostname command.
+│   │
+│   ├── Verify IP Address
+│   │      ➜ Verified IPv4 settings using ipconfig /all.
+│   │
+│   ├── Ping Server
+│   │      ➜ Tested connectivity from the client to the server.
+│   │
+│   └── Ping Client
+│          ➜ Tested connectivity from the server to the client.
+│
+├── Commands Used
+│   ├── hostname
+│   ├── ipconfig
+│   ├── ipconfig /all
+│   ├── ping 10.10.50.10
+│   └── ping 10.10.50.20
+│
+└── Lab Outcome
+    ├── Internal virtual network successfully created.
+    ├── Static IPv4 addressing implemented.
+    ├── Reliable communication established between both VMs.
+    └── Baseline checkpoints created for recovery.
