@@ -1,0 +1,65 @@
+Windows Server Infrastructure
+│
+├── Lab 01
+│     Windows Server Installation
+│
+├── Lab 02
+│     Internal Network Configuration
+│     │
+│     ├── Hyper-V Internal Switch
+│     ├── Static IPv4
+│     ├── Hostname Configuration
+│     ├── Ping Verification
+│     └── Hyper-V Checkpoints
+│
+├── Lab 03
+│     Windows Local Administration
+│     │
+│     ├── Local Users
+│     ├── Local Groups
+│     ├── NTFS Permissions
+│     ├── SMB Share
+│     ├── Share Permissions
+│     └── Access Verification
+│
+├── Lab 04
+│     Active Directory
+│     │
+│     ├── AD DS Installation
+│     ├── Domain Controller
+│     ├── Organizational Units
+│     ├── Security Groups
+│     ├── Domain Users
+│     └── Domain Join
+│
+├── Lab 05
+│     DNS Server
+│     │
+│     ├── Forward Lookup Zone
+│     ├── A Records
+│     ├── CNAME Records
+│     ├── Forwarders
+│     ├── nslookup
+│     └── DNS Troubleshooting
+│
+├── Lab 06
+│     DHCP Server
+│     │
+│     ├── DHCP Role
+│     ├── Authorization
+│     ├── DHCP Scope
+│     ├── Exclusion Range
+│     ├── Reservations
+│     ├── DHCP Options
+│     └── Lease Verification
+│
+└── Lab 07
+      Group Policy
+      │
+      ├── User Policies
+      ├── Computer Policies
+      ├── Firewall Policy
+      ├── Desktop Wallpaper
+      ├── gpupdate
+      ├── gpresult
+      └── Policy Troubleshooting
