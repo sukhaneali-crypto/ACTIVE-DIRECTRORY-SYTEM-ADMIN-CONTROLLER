@@ -1,0 +1,99 @@
+task 5  DHCP Server Configuration & Management
+│
+├── DHCP Server Installation
+│   ├── Install DHCP Server Role
+│   │      ➜ Installed the DHCP Server role on SNA-WS01.
+│   │
+│   ├── Complete DHCP Configuration
+│   │      ➜ Completed the post-installation configuration.
+│   │
+│   ├── Authorize DHCP Server
+│   │      ➜ Authorized the DHCP server in Active Directory.
+│   │
+│   └── Verify DHCP Service
+│          ➜ Confirmed the DHCP service was running successfully.
+│
+├── DHCP Scope Configuration
+│   ├── Create LAB-SCOPE
+│   │      ➜ Created a new DHCP scope for the internal network.
+│   │
+│   ├── Configure IP Range
+│   │      ➜ Assigned the address pool (10.10.50.100–10.10.50.200).
+│   │
+│   ├── Configure Exclusion Range
+│   │      ➜ Excluded reserved IP addresses from dynamic allocation.
+│   │
+│   ├── Configure Lease Duration
+│   │      ➜ Set an 8-hour lease duration for lab clients.
+│   │
+│   └── Activate Scope
+│          ➜ Enabled the DHCP scope for client use.
+│
+├── DHCP Options Configuration
+│   ├── Configure DNS Server
+│   │      ➜ Assigned 10.10.50.10 as the DNS server (Option 006).
+│   │
+│   ├── Configure DNS Domain
+│   │      ➜ Configured itlab.local as the DNS suffix (Option 015).
+│   │
+│   ├── Leave Router Option Blank
+│   │      ➜ No default gateway configured for the internal lab.
+│   │
+│   └── Verify Scope Options
+│          ➜ Confirmed DHCP options were correctly applied.
+│
+├── Client DHCP Configuration
+│   ├── Enable Automatic IP Assignment
+│   │      ➜ Configured the client to obtain IP and DNS automatically.
+│   │
+│   ├── Request DHCP Lease
+│   │      ➜ Obtained a dynamic IP address from the DHCP server.
+│   │
+│   ├── Verify Lease Information
+│   │      ➜ Confirmed assigned IP, DNS server, and lease details.
+│   │
+│   └── Verify Domain Information
+│          ➜ Confirmed the client received the correct DNS suffix.
+│
+├── DHCP Reservation
+│   ├── Locate Client Lease
+│   │      ➜ Identified the client's active DHCP lease.
+│   │
+│   ├── Create Reservation
+│   │      ➜ Reserved a permanent IP address for SNA-WIN01.
+│   │
+│   ├── Renew DHCP Lease
+│   │      ➜ Requested a new lease using the reserved IP.
+│   │
+│   └── Verify Reservation
+│          ➜ Confirmed the reserved IP address was successfully assigned.
+│
+├── DHCP Troubleshooting
+│   ├── Simulate DNS Option Failure
+│   │      ➜ Configured an incorrect DNS server through DHCP.
+│   │
+│   ├── Verify Name Resolution Failure
+│   │      ➜ Confirmed DNS lookups failed on the client.
+│   │
+│   ├── Restore Correct DHCP Options
+│   │      ➜ Reconfigured the correct DNS server option.
+│   │
+│   └── Verify Successful Resolution
+│          ➜ Confirmed DNS and DHCP functionality were restored.
+│
+├── Command-Line Verification
+│   ├── ipconfig /release
+│   ├── ipconfig /renew
+│   ├── ipconfig /all
+│   ├── ipconfig /flushdns
+│   ├── nslookup filesrv.itlab.local
+│   └── nslookup portal.itlab.local
+│
+└── Lab Outcome
+    ├── DHCP Server successfully installed and authorized.
+    ├── DHCP scope configured with address pool and exclusions.
+    ├── DHCP options distributed DNS configuration automatically.
+    ├── Client successfully obtained dynamic IP configuration.
+    ├── DHCP reservation implemented for consistent IP assignment.
+    ├── DHCP and DNS integration successfully verified.
+    └── Enterprise DHCP services successfully deployed and tested.
