@@ -1,0 +1,71 @@
+task 4 DNS Configuration and Troubleshooting
+│
+├── DNS Server Verification
+│   ├── Open DNS Manager
+│   │      ➜ Accessed DNS Manager on the Domain Controller.
+│   │
+│   ├── Verify Forward Lookup Zone
+│   │      ➜ Confirmed the itlab.local zone was created successfully.
+│   │
+│   └── Verify DNS Service
+│          ➜ Ensured the DNS service was running correctly.
+│
+├── DNS Record Management
+│   ├── Create A Record
+│   │      ➜ Created filesrv.itlab.local pointing to 10.10.50.10.
+│   │
+│   ├── Create CNAME Record
+│   │      ➜ Created portal.itlab.local as an alias for filesrv.
+│   │
+│   └── Verify DNS Records
+│          ➜ Confirmed both records were successfully created.
+│
+├── DNS Forwarders
+│   ├── Configure Forwarder
+│   │      ➜ Added 8.8.8.8 as a DNS forwarder (if Internet was available).
+│   │
+│   ├── Apply DNS Settings
+│   │      ➜ Saved and applied the forwarder configuration.
+│   │
+│   └── Verify Forwarders
+│          ➜ Confirmed the forwarder was successfully configured.
+│
+├── DNS Client Testing
+│   ├── Flush DNS Cache
+│   │      ➜ Cleared the client's DNS resolver cache.
+│   │
+│   ├── Test A Record
+│   │      ➜ Verified filesrv.itlab.local resolved correctly.
+│   │
+│   ├── Test CNAME Record
+│   │      ➜ Verified portal.itlab.local resolved through the alias.
+│   │
+│   └── Verify Name Resolution
+│          ➜ Confirmed successful internal DNS resolution.
+│
+├── DNS Troubleshooting
+│   ├── Configure Incorrect DNS
+│   │      ➜ Assigned an invalid DNS server to simulate failure.
+│   │
+│   ├── Verify Resolution Failure
+│   │      ➜ Confirmed DNS queries failed using nslookup.
+│   │
+│   ├── Restore Correct DNS
+│   │      ➜ Reconfigured the client to use 10.10.50.10.
+│   │
+│   └── Verify Successful Resolution
+│          ➜ Confirmed DNS functionality was restored.
+│
+├── Command-Line Verification
+│   ├── ipconfig /all
+│   ├── ipconfig /flushdns
+│   ├── nslookup filesrv.itlab.local
+│   └── nslookup portal.itlab.local
+│
+└── Lab Outcome
+    ├── DNS infrastructure successfully configured.
+    ├── Forward Lookup Zone verified.
+    ├── A Record and CNAME Record successfully created.
+    ├── Internal name resolution verified using nslookup.
+    ├── DNS failure successfully simulated and resolved.
+    └── Enterprise DNS services successfully implemented and tested.
