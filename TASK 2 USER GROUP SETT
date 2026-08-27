@@ -1,0 +1,90 @@
+task 2- Windows Local Administration
+│
+├── Local User Management
+│   ├── Create user_staff1
+│   │      ➜ Created a local staff account on SNA-WS01.
+│   │
+│   ├── Create user_staff2
+│   │      ➜ Created a second local staff account.
+│   │
+│   └── Create user_guest
+│          ➜ Created a local guest account with limited access.
+│
+├── Local Group Management
+│   ├── Create GRP_Staff
+│   │      ➜ Created a security group for staff members.
+│   │
+│   ├── Create GRP_Guests
+│   │      ➜ Created a security group for guest users.
+│   │
+│   ├── Add Staff Members
+│   │      ➜ Added user_staff1 and user_staff2 to GRP_Staff.
+│   │
+│   └── Add Guest Member
+│          ➜ Added user_guest to GRP_Guests.
+│
+├── Folder Configuration
+│   ├── Create C:\Shares
+│   │      ➜ Created the parent directory for shared resources.
+│   │
+│   └── Create DeptFiles
+│          ➜ Created the department folder for file sharing.
+│
+├── NTFS Permissions
+│   ├── Disable Inheritance
+│   │      ➜ Converted inherited permissions to explicit permissions.
+│   │
+│   ├── Configure GRP_Staff
+│   │      ➜ Assigned Modify permission.
+│   │
+│   ├── Configure GRP_Guests
+│   │      ➜ Assigned Read & Execute permission.
+│   │
+│   └── Configure Administrators
+│          ➜ Assigned Full Control.
+│
+├── Effective Access Verification
+│   ├── Test user_staff1
+│   │      ➜ Verified Modify permission.
+│   │
+│   └── Test user_guest
+│          ➜ Verified Read-only access.
+│
+├── SMB File Sharing
+│   ├── Share Folder
+│   │      ➜ Shared C:\Shares\DeptFiles as DeptFiles.
+│   │
+│   ├── Configure Share Permissions
+│   │      ➜ Staff: Change | Guests: Read | Administrators: Full Control.
+│   │
+│   └── Verify SMB Share
+│          ➜ Confirmed network sharing configuration.
+│
+├── Client Access Testing
+│   ├── Login as user_staff1
+│   │      ➜ Successfully created and modified files.
+│   │
+│   ├── Login as user_guest
+│   │      ➜ Successfully viewed files.
+│   │
+│   ├── Verify Access Denied
+│   │      ➜ Guest could not create, modify, or delete files.
+│   │
+│   └── Clear Cached Credentials
+│          ➜ Removed previous SMB authentication sessions.
+│
+├── PowerShell Commands                                                      /// commands we used in the configuration
+│   ├── Get-LocalUser           
+│   ├── Get-LocalGroupMember -Group "GRP_Staff"
+│   ├── Get-LocalGroupMember -Group "GRP_Guests"
+│   ├── Get-SmbShare
+│   ├── Get-SmbShareAccess
+│   
+│
+└── Lab Outcome
+    ├── Local users and security groups successfully created.
+    ├── NTFS permissions implemented using least privilege.
+    ├── SMB file sharing configured securely.
+    ├── Staff users granted Modify access.
+    ├── Guest users restricted to Read-only access.
+    └── File access successfully verified from the client machine.
